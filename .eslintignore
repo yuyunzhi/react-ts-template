@@ -5,3 +5,4 @@ dist/
 scripts/
 yarn.lock
 src/serviceWorker.ts
+src/react-app-env.d.ts
