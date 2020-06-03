@@ -4,5 +4,4 @@ es/
 dist/
 scripts/
 yarn.lock
-webpack.dev.config.js
-serviceWorker.js
+src/serviceWorker.ts

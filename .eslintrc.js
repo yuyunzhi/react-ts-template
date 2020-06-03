@@ -12,7 +12,7 @@ module.exports = {
     "extends": ["airbnb", "plugin:prettier/recommended"],
     "plugins": ["react-hooks"],
     "rules": {
-        "react/jsx-filename-extension": [1, { extensions: [".js"] }], // 允许js文件使用jsx语法
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": 1, // 开启PropTypes验证
         "react/forbid-prop-types": 0,
         "react/prefer-stateless-function": 1, // 建议使用函数式组件
@@ -21,6 +21,16 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
         "react-hooks/exhaustive-deps": "warn", // 检查 effect 的依赖
         'import/no-unresolved': [1, { ignore: ['^@/'] }],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
         'max-lines': ['error', 1000],
         'jsx-control-statements/jsx-use-if-tag': 'off',
         'consistent-return': 'warn',
@@ -55,5 +65,17 @@ module.exports = {
         ],
         // 禁止在条件中使用常量表达式 if(true),if(1)
         "no-constant-condition": 2,
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
     }
 }
