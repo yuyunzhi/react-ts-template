@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import classNames from 'classnames';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className={classNames('App')}>
+      <header className={classNames({'App-header':true})}>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
